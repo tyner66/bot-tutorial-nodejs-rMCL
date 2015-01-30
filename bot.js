@@ -18,7 +18,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/rMCF/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/maddencl/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -48,14 +48,14 @@ function respond() {
   }
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/rMCF/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/maddencl/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/rMCF/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/maddencl/players?name="+rep+"&position=all&team=all");
     this.res.end();
   } 
   
