@@ -6,8 +6,8 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
-      botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexFG = /^\/fag/; botRegexSC = /^\/SDL/i
-      botRegexP = /^\/PDL/i; botRegexN = /nigger/i; botRegexTw = /^\/twitch/i
+      botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexUser = /^\/users/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -59,9 +59,9 @@ function respond() {
     this.res.end();
   } 
   
-  else if(request.text && botRegexN.test(request.text)) {
+  else if(request.text && botRegexUser.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("HARD R ALERT");
+    postMessage("https://docs.google.com/spreadsheets/d/1byoEROZXIsl-eRbOxN7PDErjw68kt9ZVnrjoeUnV500/edit?usp=sharing");
     this.res.end();
   } 
   else if(request.text && botRegexTw.test(request.text)) {
