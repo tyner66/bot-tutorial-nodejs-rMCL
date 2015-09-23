@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
+      botRegex = /^\/cool guy/; botRegexWITT = /^\/witt/; botRegexFYS = /^\/fys/; botRegexJESUS = /^\/jesus/; botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botRegexUs = /^\/users/ ;  
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -14,6 +14,21 @@ function respond() {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
+    this.res.end();
+  } 
+  else if(request.text && botRegexWITT.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://www.wittenbergtigers.com/information/logos/graphics/primary.jpg");
+    this.res.end();
+  } 
+  else if(request.text && botRegexFYS.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/FQpmX52vDfhja/giphy.gif");
+    this.res.end();
+  } 
+  else if(request.text && botRegexJESUS.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/3KEJl20q5ggBW/giphy.gif");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
