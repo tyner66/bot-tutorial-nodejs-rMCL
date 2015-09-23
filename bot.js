@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexCOMMAND = /^\/command/; botRegexTRADE = /^\/trade/; botRegexBLOCK = /^\/block/; botRegexSELL = /^\/sell/;  botRegexTRADES = /^\/completed/; botRegexOWNER = /^\/owners/; botRegexNEW = /^\/new/; botRegexRULES = /^\/rules/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
+      botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botRegexUs = /^\/users/ ;  
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -14,51 +14,6 @@ function respond() {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
-    this.res.end();
-  } 
-  else if(request.text && botRegexCOMMAND.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/16a0fcm_rijQS0X60wBM7bjn_gfEddDXAMmepVYZo7jU/edit?usp=sharing");
-    this.res.end();
-  } 
-  else if(request.text && botRegexTRADE.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://goo.gl/forms/5Vc4qx41Kx");
-    this.res.end();
-  } 
-  else if(request.text && botRegexBLOCK.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1nWUXxMOjGZdfz_fEuL-163t1DQfYQngZBwyxICWD4VU/edit?usp=sharing");
-    this.res.end();
-  } 
-  else if(request.text && botRegexSELL.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://goo.gl/forms/dSXpa5WofB");
-    this.res.end();
-  } 
-  else if(request.text && botRegexTRADES.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1_saEfwCioR93CvRG8-ToDB-WsUyLs3_ehhsGaJpAl24/edit?usp=sharing");
-    this.res.end();
-  } 
-  else if(request.text && botRegexOWNER.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1eyNG_yLSz4QUu0rVetQBNeHuUOSzv_Dk1TjKR4zIclI/edit?usp=sharing");
-    this.res.end();
-  } 
-  else if(request.text && botRegexNEW.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://goo.gl/forms/CCxuCunKOw");
-    this.res.end();
-  } 
-  else if(request.text && botRegexRULES.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1pBCDenl4hQjc5T9ZNX4OYmRhqMhsVLyPzzi-K3gN1Kc/edit?usp=sharing");
-    this.res.end();
-  } 
-  else if(request.text && botRegexDL.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("NA");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
