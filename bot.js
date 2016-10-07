@@ -103,17 +103,17 @@ function respond() {
   }
   else if(request.text && botRegexPLAYER.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/amsfl/stats/player");
+    postMessage("N/A");
     this.res.end();
   }
   else if(request.text && botRegexSTATS.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/amsfl/stats/team");
+    postMessage("N/A");
     this.res.end();
   }
   else if(request.text && botRegexGAMES.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/amsfl/schedules");
+    postMessage("N/A");
     this.res.end();
   }
   else if(request.text && botRegexSTANDINGS.test(request.text)) {
@@ -123,17 +123,17 @@ function respond() {
   }
   else if(request.text && botRegexPOWER.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/amsfl/standing/ranking");
+    postMessage("N/A");
     this.res.end();
   } 
   else if(request.text && botRegexDADDY.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/amsfl");
+    postMessage("N/A");
     this.res.end();
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/amsfl/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("N/A");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -153,14 +153,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/amsfl/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("N/A");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/amsfl/players?name="+rep+"&position=all&team=all");
+    postMessage("N/A");
     this.res.end();
   } 
 
