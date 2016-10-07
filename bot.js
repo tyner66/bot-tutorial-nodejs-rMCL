@@ -18,17 +18,17 @@ function respond() {
   }
   else if(request.text && botRegexFORUM.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/amsfl/forum/forum/5285");
+    postMessage("N/A");
     this.res.end();
   }
   else if(request.text && botRegexFORUM.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/amsfl/forum");
+    postMessage("N/A");
     this.res.end();
   }
   else if(request.text && botRegexTRADES.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.daddyleagues.com/amsfl/forum/forum/5002");
+    postMessage("N/A");
     this.res.end();
   }
   else if(request.text && botRegexWAH.test(request.text)) {
